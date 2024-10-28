@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rødbrun: rgb(92,40,30);
+    --baggrund: rgb(222,217,197);
+    --tekst: rgb(48,48,49);
+    --oliven: rgb(140,135,106);
+    --karry: rgb(190,162,81);
+    --off-white: rgb(251,249,237)
+}
+
+body {
+    margin: 0;
+    font-family: "Epilogue";
+    background-color:var(--baggrund);
+    color: var(--tekst);
+    margin-left: 6rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+    padding-top: 9rem;
+}
+
+
+/* Navigation bar */
+.navbar-container {
+    display: flex; 
+    justify-content: space-between; /* Sørger for at logoet er til venstre og menuen til højre */
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: var(--baggrund);
+    position: fixed;
+    width: 100%; /* Sikrer at baren fylder hele bredden */
+    top: 0;
+    left: 0;
+    right: 0rem;
+    z-index: 1000; /* Sørger for at baren er øverst */
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 4rem;
+    display: flex;
+    gap: 20px; /* Afstand mellem menu punkterne */
+}
+
+.navbar ul li {
+    display: inline-block; /* Placeres på horisontal linje*/
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Fjerne stregen under menupunkter*/
+    color: var(--tekst);
+    font-size: 1.1rem;
+    padding: 15px 15px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--oliven); /* Farven når musen kører hen over */
+}
+
+/* Dropdown menu */
+
+.dropdown-content {
+    display: none; /* viser ikke underpunkterne */
+    position: absolute;
+    background-color: var(--off-white);
+    max-width: 175px; /* Max vidde på  dropdownboks */ 
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: var(--oliven);
+    color: var(--tekst);
+    font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Dropdownmenu indholdet bliver synligt når musen køres over */
+}
+
+.dropbtn {
+    cursor: pointer; /* Pegehånd */
+}
+
+.øjnbrynstitel {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    color: var(--tekst);
+    font-family: "Epilogue";
+}
+
+h1 {
+    font-family: "Playfair Display";
+    color: var(--rødbrun);
+    font-size: 60px;
+    margin-top: 0rem;
+}
+
+.header-content {
+    display: flex; /* Placeres i en række */
+    align-items: center; /* Centrerer vertikalt */
+    justify-content: space-between;
+}
+
+.header-content img.stjernesymbol {
+    width: 400px; /* Størrelse på billedet */
+    height: auto;
+    margin-left: 30px;
+
+}
+
+.indledning {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    line-height: 1.5rem;
+}
+
+h2 {
+    font-size: 25px;
+    color: var(--tekst);
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+/* CSS til tal */
+
+h2 span {
+    font-weight: bold;
+    font-size: 40px;
+    padding-right: 10px;
+    color: var(--tekst);
+    font-family: "Fairplay Display";
+}
+
+.number2 {
+    color: var(--oliven);
+}
+
+/* Tekst layout*/
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tekst);
+    max-width: 1000px;
+}
+
+li {
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+
+/* tjekliste */
+
+.tjekliste {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    gap: 20px;
+    flex-wrap: wrap; /* Tillader linjebrud, hvis vinduet bliver mindre */
+
+}
+
+.item-content {
+    max-width: 800px;
+}
+
+/* link */
+
+a {
+    color: var(--rødbrun);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* linje under link når musen køres over */
+}
+
+/* flueben*/
+
+input[type="checkbox"] {
+    margin-right: 30px;
+    width: 50px;
+    height: 50px;
+    appearance: none; /* Fjerner standard checkbox-styling */
+    background-color: var(--off-white);
+    border: 1px solid var(--tekst);
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* fluebenet i boksen */
+
+  input[type="checkbox"]:checked::after {
+    content: ""; 
+    position: absolute;
+    width: 10px;
+    height: 24px;
+    border: solid var(--rødbrun); 
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+    top: 45%;
+    left: 50%; 
+    transform: translate(-50%, -50%) rotate(45deg);
+
+}

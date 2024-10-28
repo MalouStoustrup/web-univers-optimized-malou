@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rødbrun: rgb(92,40,30);
+    --baggrund: rgb(222,217,197);
+    --tekst: rgb(48,48,49);
+    --oliven: rgb(140,135,106);
+    --karry: rgb(190,162,81);
+    --off-white: rgb(251,249,237)
+}
+
+body {
+    margin: 0;
+    font-family: "Epilogue";
+    background-color:var(--baggrund);
+    color: var(--tekst);
+    margin-left: 6rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+    padding-top: 9rem;
+}
+
+/* Navigation bar */
+.navbar-container {
+    display: flex; 
+    justify-content: space-between; /* Sørger for at logoet er til venstre og menuen til højre */
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: var(--baggrund);
+    position: fixed;
+    width: 100%; /* Sikrer at baren fylder hele bredden */
+    top: 0;
+    left: 0;
+    right: 0rem;
+    z-index: 1000; /* Sørger for at baren er øverst */
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 4rem;
+    display: flex;
+    gap: 20px; /* Afstand mellem menu punkterne */
+}
+
+.navbar ul li {
+    display: inline-block; /* Placeres på horisontal linje*/
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Fjerne stregen under menupunkter*/
+    color: var(--tekst);
+    font-size: 1.1rem;
+    padding: 15px 15px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--oliven); /* Farven når musen kører hen over */
+}
+
+/* Dropdown menu */
+
+.dropdown-content {
+    display: none; /* viser ikke underpunkterne */
+    position: absolute;
+    background-color: var(--off-white);
+    max-width: 175px; /* Max vidde på  dropdownboks */ 
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: var(--oliven);
+    color: var(--tekst);
+    font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Dropdownmenu indholdet bliver synligt når musen køres over */
+}
+
+.dropbtn {
+    cursor: pointer; /* Pegehånd */
+}
+
+h1 {
+    font-family: "Playfair Display";
+    color: var(--rødbrun);
+    margin-top: calc(-2rem);
+}
+
+/* Velkomst sektion */
+.velkommen {
+    display: flex;
+    flex-direction: column;
+}
+
+.velkommen h1 {
+    font-family: 'Playfair Display', serif;
+    font-size:4rem;
+    color: var(--rødbrun);
+}
+
+.velkommen p {
+    font-size: 2.5rem;
+    color: var(--tekst);
+    font-style: italic;
+    line-height: 60px;
+    font-weight: 300;
+    padding-left: 18rem;
+
+}
+
+/* mere info boks */
+.info-box {
+    display: flex; /* Placere stjernen og teksten i linje */
+    align-items: center; /* Vertikal centrering */
+    padding: 10px;
+    cursor: pointer; 
+}
+.info-text:hover {
+    color: var(--oliven);
+}
+
+/* Ikonboks */
+.icon-box {
+    display: flex; /* Centrer ikonet */
+    justify-content: center;
+    align-items: center;
+    width: 40px; 
+    height: 40px;
+    border: 1px solid var(--tekst);
+    margin-right: 30px; 
+}
+
+/* Ikonet */
+.icon {
+    font-size: 20px; 
+}
+
+/* Teksten */
+.info-text {
+    font-family: "Epilogue", sans-serif;
+    font-size: 18px;
+    color: var(--tekst);
+}
+
+/* Billed placering */
+
+.kasser, .planter, .plukk, .studie, .træ {
+    display: block;
+    width: 20rem;
+    height: auto;
+    position: absolute;
+
+}
+
+/* Specifikke positioner for hvert billede */
+.kasser {
+    top: 32rem;
+    left: 20rem;
+}
+
+.planter {
+    top: 20rem;
+    left: 43rem;
+}
+
+.plukk {
+    top: calc(-1.5rem);
+    left: 43rem;
+}
+
+.studie {
+    top: 6rem;
+    left: 66rem;
+}
+
+.træ {
+    top: 40rem;
+    left: 66rem;
+}
+
+/* billede text */
+
+.text {
+    padding: 2rem;
+    color: var(--off-white);
+}
+
+.text p {
+    padding-top: 1rem;
+    font-size: small;
+    line-height: 2;
+    font-weight: 200;
+}
+
+.text h2 {
+    font-weight: 200;
+}
+
+.bottom {
+    padding-top: 22rem; /* sætter teksten i bunden af billedet */
+}
+
+.forside-billeder-grid img {
+    transition: transform 0.6s ease-in-out; /* Glidende overgang både ind og ud */
+}
+
+.forside-billeder-grid article:hover img {
+    transform: scale(1.1);
+}
+
+.forside-billeder-grid article:hover .text {
+    transform: scale(1.05); 
+    transition: transform 0.6s ease-in-out;
+}

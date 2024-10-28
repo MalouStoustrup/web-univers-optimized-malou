@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f1e0;
+    color: #4a3d32;
+}
+
+
+:root {
+    --rødbrun: rgb(92,40,30);
+    --baggrund: rgb(222,217,197);
+    --tekst: rgb(48,48,49);
+    --oliven: rgb(140,135,106);
+    --karry: rgb(190,162,81);
+    --off-white: rgb(251,249,237)
+}
+
+body {
+    margin: 0;
+    font-family: "Epilogue";
+    background-color:var(--baggrund);
+    color: var(--tekst);
+    margin-left: 6rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+    padding-top: 9rem;
+}
+
+/* Navigation bar */
+.navbar-container {
+    display: flex; 
+    justify-content: space-between; /* Sørger for at logoet er til venstre og menuen til højre */
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: var(--baggrund);
+    position: fixed;
+    width: 100%; /* Sikrer at baren fylder hele bredden */
+    top: 0;
+    left: 0;
+    right: 0rem;
+    z-index: 1000; /* Sørger for at baren er øverst */
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 4rem;
+    display: flex;
+    gap: 20px; /* Afstand mellem menu punkterne */
+}
+
+.navbar ul li {
+    display: inline-block; /* Placeres på horisontal linje*/
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Fjerne stregen under menupunkter*/
+    color: var(--tekst);
+    font-size: 1.1rem;
+    padding: 15px 15px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--oliven); /* Farven når musen kører hen over */
+}
+
+/* Dropdown menu */
+
+.dropdown-content {
+    display: none; /* viser ikke underpunkterne */
+    position: absolute;
+    background-color: var(--off-white);
+    max-width: 175px; /* Max vidde på  dropdownboks */ 
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: var(--oliven);
+    color: var(--tekst);
+    font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Dropdownmenu indholdet bliver synligt når musen køres over */
+}
+
+.dropbtn {
+    cursor: pointer; /* Pegehånd */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To lige store kolonner */
+    gap: 5rem; /* afstad mellem de to kolonner */
+}
+
+.column {
+    padding: 10px;
+}
+
+.øjnbrynstitel {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: "Playfair Display";
+    color: var(--rødbrun);
+    font-size: 3.5rem;
+    margin-top: calc(-2rem);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-size: 25px;
+    color: var(--tekst);
+    font-weight: 300;
+    padding-top: 1rem;
+ }
+
+ /* Tal */
+
+ h2 span {
+    font-weight: bold;
+    font-size: 40px;
+    padding-right: 10px;
+    color: var(--tekst);
+    font-family: "Fairplay Display";
+}
+
+.two {
+    color: var(--oliven);
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tekst);
+    max-width: 700px;
+    min-width: 700px;
+    text-align-last: left;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Billeder */
+
+.natur {
+    width: 100%;
+    margin-left: calc(-10rem);
+    padding: 3rem;
+}
+
+.plukk {
+    width: 130%;
+    margin-top: 10rem;
+    margin-left: 1rem;
+}
+
+/* Detaljer for højre kolonne */
+
+.højre-kolonne p {
+    max-width: 400px;
+    min-width: 400px;
+}
+
+.højre-kolonne {
+    margin-top: calc(-12rem);
+}

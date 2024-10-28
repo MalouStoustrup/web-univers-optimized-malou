@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+sitemap: https://webunivers.maloustoustrup.dk/sitemap.xml

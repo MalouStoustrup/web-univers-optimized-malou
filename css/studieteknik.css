@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --rødbrun: rgb(92,40,30);
+    --baggrund: rgb(222,217,197);
+    --tekst: rgb(48,48,49);
+    --oliven: rgb(140,135,106);
+    --karry: rgb(190,162,81);
+    --off-white: rgb(251,249,237)
+}
+
+body {
+    margin: 0;
+    font-family: "Epilogue";
+    background-color:var(--baggrund);
+    color: var(--tekst);
+    margin-left: 6rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+    padding-top: 9rem;
+}
+
+/* Navigation bar */
+.navbar-container {
+    display: flex; 
+    justify-content: space-between; /* Sørger for at logoet er til venstre og menuen til højre */
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: var(--baggrund);
+    position: fixed;
+    width: 100%; /* Sikrer at baren fylder hele bredden */
+    top: 0;
+    left: 0;
+    right: 0rem;
+    z-index: 1000; /* Sørger for at baren er øverst */
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 4rem;
+    display: flex;
+    gap: 20px; /* Afstand mellem menu punkterne */
+}
+
+.navbar ul li {
+    display: inline-block; /* Placeres på horisontal linje*/
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Fjerne stregen under menupunkter*/
+    color: var(--tekst);
+    font-size: 1.1rem;
+    padding: 15px 15px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--oliven); /* Farven når musen kører hen over */
+}
+
+/* Dropdown menu */
+
+.dropdown-content {
+    display: none; /* viser ikke underpunkterne */
+    position: absolute;
+    background-color: var(--off-white);
+    max-width: 175px; /* Max vidde på  dropdownboks */ 
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: var(--oliven);
+    color: var(--tekst);
+    font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Dropdownmenu indholdet bliver synligt når musen køres over */
+}
+
+.dropbtn {
+    cursor: pointer; /* Pegehånd */
+}
+
+.øjnbrynstitel {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: "Playfair Display";
+    color: var(--rødbrun);
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-family: "Playfair Display";
+    font-size: 2.3rem;
+    color: var(--rødbrun);
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tekst);
+    max-width: 1000px;
+}
+
+
+.indledning {
+    padding-bottom: 2rem;
+    max-width: 800px;
+    text-align: justify; 
+    text-align-last: left;
+}
+
+/* Billede placering */
+
+.biblo {
+    display: block;
+    width: 55%;
+    height: auto;
+    position: absolute;
+    z-index: -1; 
+    top: 38rem;
+    right: 0rem;
+}
+
+.læsning {
+    display: block;
+    width: 35%;
+    height: auto;
+    position: absolute;
+    z-index: -1; 
+    top: 45rem;
+    left: 0rem;
+}
+
+.studieteknikker {
+    margin-top: 40rem;
+}
+
+li {
+    padding-top: 1rem;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tekst);
+    max-width: 1000px;
+    margin-left: 1rem;
+}
+
+a {
+    color: var(--rødbrun);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* linje under link når musen køres over */
+}
+
+.studieteknikker article {
+    padding-top: 2rem;
+    text-align-last: left;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+/* CSS tal */
+
+
+h3 span {
+    font-weight: bold;
+    font-size: 40px;
+    padding-right: 10px;
+    color: var(--tekst);
+    font-family: "Fairplay Display";
+}
+
+.two {
+    color: var(--oliven);
+}
+.repetition h3 {
+    padding-top: 3rem;
+}
+
+footer {
+    margin-top: 3rem;
+}
